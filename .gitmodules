@@ -1,0 +1,3 @@
+[submodule "CreamEngine/vendor/spdlog"]
+	path = CreamEngine/vendor/spdlog
+	url = https://github.com/gabime/spdlog
