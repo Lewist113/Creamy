@@ -1,3 +1,9 @@
 [submodule "CreamEngine/vendor/spdlog"]
 	path = CreamEngine/vendor/spdlog
 	url = https://github.com/gabime/spdlog
+[submodule "CreamEngine/vendor/GLFW"]
+	path = CreamEngine/vendor/GLFW
+	url = https://github.com/TheCherno/glfw
+[submodule "CreamEngine/vendor/imgui"]
+	path = CreamEngine/vendor/imgui
+	url = https://github.com/TheCherno/imgui
