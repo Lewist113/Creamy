@@ -2,6 +2,12 @@
 
 #include "Core.h"
 
+#include "Window.h"
+#include "Cream/LayerStack.h"
+#include "Events/Event.h"
+#include "Cream/Events/ApplicationEvent.h"
+
+
 namespace CreamEngine {
 
 	class CREAMENGINE_API Application
@@ -11,6 +17,23 @@ namespace CreamEngine {
 		virtual ~Application();
 
 		void Run();
+
+		void OnEvent(Event& e);
+
+		void PushLayer(Layer* layer);
+		void PushOverlay(Layer* layer);
+
+		inline static Application& Get() { return *s_Instance; }
+		
+		inline Window& GetWindow() { return *m_Window; }
+	private:
+		bool OnWindowClose(WindowCloseEvent& e);
+
+		std::unique_ptr<Window> m_Window;
+		bool m_Running = true;
+		LayerStack m_LayerStack;
+	private:
+		static Application* s_Instance;
 	};
 
 

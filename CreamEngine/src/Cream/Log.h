@@ -2,6 +2,7 @@
 
 #include "Core.h"
 #include "spdlog/spdlog.h"
+#include "spdlog/fmt/ostr.h"
 
 namespace CreamEngine {
 
@@ -11,8 +12,8 @@ namespace CreamEngine {
 
 		static void Init();
 
-		inline static std::shared_ptr<spdlog::logger>& GetCoreLogger() { return s_CoreLogger; }
-		inline static std::shared_ptr<spdlog::logger>& GetClientLogger() { return s_ClientLogger; }
+		static std::shared_ptr<spdlog::logger>& GetCoreLogger() { return s_CoreLogger; }
+		static std::shared_ptr<spdlog::logger>& GetClientLogger() { return s_ClientLogger; }
 	
 	private:
 		static std::shared_ptr<spdlog::logger> s_CoreLogger;
@@ -30,10 +31,10 @@ namespace CreamEngine {
 #define CR_CORE_FATAL(...)     ::CreamEngine::Log::GetCoreLogger()->critical(__VA_ARGS__)
 
 //Client log MACROS
-#define CR_CLIENT_TRACE(...)   ::CreamEngine::Log::GetClientLogger()->trace(__VA_ARGS__)
-#define CR_CLIENT_INFO(...)    ::CreamEngine::Log::GetClientLogger()->info(__VA_ARGS__)
-#define CR_CLIENT_WARN(...)    ::CreamEngine::Log::GetClientLogger()->warn(__VA_ARGS__)
-#define CR_CLIENT_ERROR(...)   ::CreamEngine::Log::GetClientLogger()->error(__VA_ARGS__)
-#define CR_CLIENT_FATAL(...)   ::CreamEngine::Log::GetClientLogger()->critical(__VA_ARGS__)
+#define CR_TRACE(...)   ::CreamEngine::Log::GetClientLogger()->trace(__VA_ARGS__)
+#define CR_INFO(...)    ::CreamEngine::Log::GetClientLogger()->info(__VA_ARGS__)
+#define CR_WARN(...)    ::CreamEngine::Log::GetClientLogger()->warn(__VA_ARGS__)
+#define CR_ERROR(...)   ::CreamEngine::Log::GetClientLogger()->error(__VA_ARGS__)
+#define CR_FATAL(...)   ::CreamEngine::Log::GetClientLogger()->critical(__VA_ARGS__)
 
 

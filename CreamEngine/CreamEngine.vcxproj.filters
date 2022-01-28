@@ -1,42 +1,99 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    <Filter Include="Cream">
+      <UniqueIdentifier>{ADA7FB0C-19BC-23BE-E23D-C71D4E1120EF}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    <Filter Include="Cream\Events">
+      <UniqueIdentifier>{F14E6CAA-DDB1-FB4E-8637-34057279C7D1}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    <Filter Include="Cream\imgui">
+      <UniqueIdentifier>{D7024455-43B8-BC4A-CCAC-B6213861B34E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\OpenGl">
+      <UniqueIdentifier>{3E7D2C1D-AA08-9AE1-B319-1DD61F24F6E1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\Windows">
+      <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Cream.h" />
     <ClInclude Include="src\Cream\Application.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Cream.h">
-      <Filter>Header Files</Filter>
+      <Filter>Cream</Filter>
     </ClInclude>
     <ClInclude Include="src\Cream\Core.h">
-      <Filter>Header Files</Filter>
+      <Filter>Cream</Filter>
     </ClInclude>
     <ClInclude Include="src\Cream\EntryPoint.h">
-      <Filter>Header Files</Filter>
+      <Filter>Cream</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Cream\Events\ApplicationEvent.h">
+      <Filter>Cream\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Cream\Events\Event.h">
+      <Filter>Cream\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Cream\Events\KeyEvent.h">
+      <Filter>Cream\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Cream\Events\MouseEvent.h">
+      <Filter>Cream\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Cream\Layer.h">
+      <Filter>Cream</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Cream\LayerStack.h">
+      <Filter>Cream</Filter>
     </ClInclude>
     <ClInclude Include="src\Cream\Log.h">
-      <Filter>Header Files</Filter>
+      <Filter>Cream</Filter>
     </ClInclude>
+    <ClInclude Include="src\Cream\Window.h">
+      <Filter>Cream</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Cream\imgui\ImGuiLayer.h">
+      <Filter>Cream\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\OpenGl\ImGuiOpenGlRenderer.h">
+      <Filter>Platform\OpenGl</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\crpch.h" />
+    <ClInclude Include="src\Platform\OpenGl\ImGuiOpenGlRenderer_Loader.h" />
+    <ClInclude Include="src\Cream\Input.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
+    <ClInclude Include="src\Cream\KeyCodes.h" />
+    <ClInclude Include="src\Cream\MouseButtonCodes.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Cream\Application.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Cream</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Cream\Layer.cpp">
+      <Filter>Cream</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Cream\LayerStack.cpp">
+      <Filter>Cream</Filter>
     </ClCompile>
     <ClCompile Include="src\Cream\Log.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Cream</Filter>
     </ClCompile>
+    <ClCompile Include="src\Cream\imgui\ImGuiLayer.cpp">
+      <Filter>Cream\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\OpenGl\ImGuiOpenGlRenderer.cpp">
+      <Filter>Platform\OpenGl</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Platform\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="src\crpch.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
   </ItemGroup>
 </Project>
